@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commande Confirmée ! | Multitech34</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1a5f4a',
+                        'secondary': '#16a085',
+                        'accent': '#f39c12',
+                        'cream': '#faf8f5'
+                    },
+                    fontFamily: { 
+                        'sans': ['Inter', 'sans-serif'],
+                        'display': ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-display { font-family: 'Outfit', sans-serif; }
+        
+        .success-icon {
+            animation: successPop 0.6s ease-out;
+        }
+        @keyframes successPop {
+            0% { transform: scale(0); opacity: 0; }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            top: -10px;
+            animation: confettiFall 3s ease-out forwards;
+        }
+        @keyframes confettiFall {
+            to {
+                top: 100vh;
+                transform: rotate(720deg);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-out 0.3s both;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body class="bg-cream min-h-screen">
+
+    <!-- Confettis -->
+    <div id="confetti-container"></div>
+
+    <!-- Navigation simplifiée -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex flex-col group">
+                    <span class="text-2xl font-bold text-primary tracking-tight font-display">Multitech34</span>
+                    <span class="text-xs text-gray-500 font-medium">Bastien - Artisan Expert</span>
+                </a>
+                <a href="tel:0649955298" class="inline-flex items-center px-4 py-2 border-2 border-accent text-accent font-bold rounded-lg hover:bg-accent hover:text-white transition-all">
+                    <i class="fas fa-phone-alt mr-2"></i> 06 49 95 52 98
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main class="pt-32 pb-20 px-4">
+        <div class="max-w-2xl mx-auto text-center">
+            
+            <!-- Icône succès -->
+            <div class="success-icon w-32 h-32 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-8">
+                <i class="fas fa-check text-green-500 text-6xl"></i>
+            </div>
+            
+            <!-- Message principal -->
+            <div class="fade-in">
+                <h1 class="text-4xl md:text-5xl font-display font-bold text-dark mb-4">
+                    Commande Confirmée ! 🎉
+                </h1>
+                <p class="text-xl text-gray-600 mb-8">
+                    Merci pour votre confiance. Bastien a bien reçu votre demande.
+                </p>
+            </div>
+            
+            <!-- Carte récapitulatif -->
+            <div class="fade-in bg-white rounded-3xl shadow-xl p-8 mb-8 text-left">
+                <h2 class="font-display font-bold text-xl text-dark mb-6 flex items-center">
+                    <i class="fas fa-clipboard-check text-primary mr-3"></i>
+                    Et maintenant ?
+                </h2>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
+                            <span class="text-primary font-bold">1</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-dark">Confirmation par email</h3>
+                            <p class="text-sm text-gray-600">Vous recevrez un email de confirmation dans les prochaines minutes avec le récapitulatif de votre commande.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
+                            <span class="text-primary font-bold">2</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-dark">Bastien vous contacte</h3>
+                            <p class="text-sm text-gray-600">Sous 24h (jours ouvrés), Bastien vous appellera ou vous enverra un SMS pour confirmer les détails et planifier l'intervention ou la livraison.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center shrink-0">
+                            <span class="text-accent font-bold">3</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-dark">Paiement à la prestation / livraison</h3>
+                            <p class="text-sm text-gray-600">Aucun paiement n'est prélevé pour le moment. Vous payez uniquement après satisfaction, sur place ou à réception.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Info vidéo (si kit) -->
+            <div class="fade-in bg-primary/5 border border-primary/20 rounded-2xl p-6 mb-8 text-left">
+                <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 bg-primary rounded-xl flex items-center justify-center shrink-0">
+                        <i class="fas fa-play text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-dark">🎬 Votre vidéo tuto arrive !</h3>
+                        <p class="text-sm text-gray-600">Si vous avez commandé un kit DIY, le lien vers votre vidéo tuto privée sera inclus dans votre colis.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA -->
+            <div class="fade-in flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html" class="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl font-bold transition shadow-lg inline-flex items-center justify-center">
+                    <i class="fas fa-home mr-2"></i>
+                    Retour à l'accueil
+                </a>
+                <a href="boutique.html" class="bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 rounded-xl font-bold transition inline-flex items-center justify-center">
+                    <i class="fas fa-shopping-bag mr-2"></i>
+                    Continuer mes achats
+                </a>
+            </div>
+            
+            <!-- Contact direct -->
+            <div class="fade-in mt-12 p-6 bg-gray-100 rounded-2xl">
+                <p class="text-gray-600 mb-3">Une question urgente ?</p>
+                <a href="tel:0649955298" class="text-2xl font-display font-bold text-primary hover:text-accent transition">
+                    <i class="fas fa-phone-alt mr-2"></i>
+                    06 49 95 52 98
+                </a>
+                <p class="text-sm text-gray-500 mt-2">Bastien répond en personne</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#0f2f24] text-white py-8">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <p class="text-sm text-green-200 mb-2">© 2025 Multitech34. Tous droits réservés.</p>
+            <p class="text-sm font-medium italic text-green-100 opacity-90">
+                "Créé avec IAmour pour <span class="text-red-500">❤️</span> Lucille <span class="text-red-500">❤️</span>"
+            </p>
+        </div>
+    </footer>
+
+    <!-- Script confettis -->
+    <script>
+        function createConfetti() {
+            const colors = ['#f39c12', '#1a5f4a', '#16a085', '#e74c3c', '#3498db', '#9b59b6'];
+            const container = document.getElementById('confetti-container');
+            
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = Math.random() * 100 + 'vw';
+                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+                    confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                    container.appendChild(confetti);
+                    
+                    setTimeout(() => confetti.remove(), 5000);
+                }, i * 50);
+            }
+        }
+        
+        // Lancer les confettis au chargement
+        window.addEventListener('load', createConfetti);
+    </script>
+</body>
+</html>

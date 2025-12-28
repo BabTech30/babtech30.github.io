@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="fr" itemscope itemtype="https://schema.org/Store">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Boutique Multitech34 : Contrats Entretien & Kits Pro DIY | Montpellier</title>
+    <meta name="description" content="Contrats d'entretien clim, PAC, chaudière + Kits professionnels pour bricoleurs. Produits testés par Bastien, vidéos tuto incluses. Livraison ou retrait Lattes.">
+    <meta name="keywords" content="kit entretien climatisation, contrat maintenance pac, produits pro clim particulier, kit désembouage radiateur, entretien gainable diy">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1a5f4a',
+                        'primary-dark': '#145040',
+                        'secondary': '#16a085',
+                        'accent': '#f39c12',
+                        'accent-hover': '#d35400',
+                        'dark': '#2c3e50',
+                        'cream': '#faf8f5',
+                        'warm-gray': '#f5f3f0'
+                    },
+                    fontFamily: { 
+                        'sans': ['Inter', 'sans-serif'],
+                        'display': ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Schema.org Store -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Store",
+        "name": "Boutique Multitech34",
+        "description": "Contrats d'entretien et kits professionnels pour particuliers",
+        "url": "https://www.multi-technique-montpellier.fr/boutique.html",
+        "telephone": "0649955298",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Lattes",
+            "postalCode": "34970",
+            "addressCountry": "FR"
+        },
+        "priceRange": "€€",
+        "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
+        "currenciesAccepted": "EUR"
+    }
+    </script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .font-display { font-family: 'Outfit', sans-serif; }
+        
+        /* Badges animés */
+        .badge-pulse {
+            animation: pulse-badge 2s infinite;
+        }
+        @keyframes pulse-badge {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        /* Cartes produits */
+        .product-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+        .product-image {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* Tabs */
+        .tab-btn {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .tab-btn::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background: #f39c12;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        .tab-btn.active::after {
+            width: 100%;
+        }
+        .tab-btn.active {
+            color: #1a5f4a;
+        }
+        
+        /* Section produits */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Bouton panier */
+        .btn-cart {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-cart:hover {
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+            transform: scale(1.02);
+        }
+        
+        /* Tag populaire */
+        .tag-popular {
+            background: linear-gradient(135deg, #1a5f4a 0%, #16a085 100%);
+        }
+        
+        /* Video preview overlay */
+        .video-overlay {
+            background: linear-gradient(135deg, rgba(26, 95, 74, 0.9) 0%, rgba(22, 160, 133, 0.9) 100%);
+        }
+        
+        /* Madison */
+        .madison-widget { position: fixed; bottom: 20px; right: 20px; z-index: 9999; }
+        .madison-button { background: linear-gradient(135deg, #1a5f4a, #16a085); width: 60px; height: 60px; border-radius: 50%; color: white; font-size: 24px; border: none; box-shadow: 0 4px 15px rgba(26, 95, 74, 0.4); cursor: pointer; transition: transform 0.3s ease; display: flex; align-items: center; justify-content: center; }
+        .madison-button:hover { transform: scale(1.1); }
+        .madison-chat { position: absolute; bottom: 80px; right: 0; width: 350px; height: 500px; background: white; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); transform: scale(0); transform-origin: bottom right; transition: transform 0.3s; display: flex; flex-direction: column; overflow: hidden; }
+        .madison-chat.active { transform: scale(1); }
+        
+        /* Grain texture overlay */
+        .grain-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+        }
+    </style>
+</head>
+
+<body class="bg-cream text-gray-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex flex-col group">
+                        <span class="text-2xl font-bold text-primary tracking-tight group-hover:text-accent transition font-display">Multitech34</span>
+                        <span class="text-xs text-gray-500 font-medium">Bastien - Artisan Expert</span>
+                    </a>
+                </div>
+                
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-primary font-semibold text-sm uppercase tracking-wide transition">Accueil</a>
+                    <a href="plomberie.html" class="text-gray-700 hover:text-primary font-semibold text-sm uppercase tracking-wide transition">Plomberie</a>
+                    <a href="chauffage.html" class="text-gray-700 hover:text-primary font-semibold text-sm uppercase tracking-wide transition">Chauffage</a>
+                    <a href="climatisation.html" class="text-gray-700 hover:text-primary font-semibold text-sm uppercase tracking-wide transition">Clim</a>
+                    <a href="boutique.html" class="text-primary font-bold border-b-2 border-accent text-sm uppercase tracking-wide">Boutique</a>
+                    <a href="contact.html" class="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-lg font-bold transition shadow-md">Contact</a>
+                </div>
+
+                <div class="hidden md:block lg:ml-4">
+                    <a href="tel:0649955298" class="inline-flex items-center px-4 py-2 border-2 border-accent text-accent font-bold rounded-lg hover:bg-accent hover:text-white transition-all">
+                        <i class="fas fa-phone-alt mr-2"></i> 06 49 95 52 98
+                    </a>
+                </div>
+                
+                <div class="lg:hidden flex items-center">
+                    <a href="tel:0649955298" class="mr-4 text-accent font-bold text-lg"><i class="fas fa-phone"></i></a>
+                    <button id="mobile-menu-button" class="text-gray-700 p-2 border border-gray-200 rounded"><i class="fas fa-bars text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-xl">
+            <div class="px-4 pt-4 pb-6 space-y-2">
+                <a href="index.html" class="block px-3 py-3 rounded-md text-base font-bold text-gray-800 hover:bg-gray-50 border-b border-gray-100">🏠 Accueil</a>
+                <a href="plomberie.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">💧 Plomberie</a>
+                <a href="chauffage.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">🔥 Chauffage</a>
+                <a href="climatisation.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">❄️ Climatisation</a>
+                <a href="boutique.html" class="block px-3 py-3 rounded-md text-base font-bold text-primary bg-green-50">🛒 Boutique</a>
+                <a href="contact.html" class="block px-3 py-3 rounded-md text-base font-bold text-white bg-primary mt-4 text-center">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Boutique -->
+    <section class="relative pt-32 pb-20 overflow-hidden">
+        <!-- Background avec motif -->
+        <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary-dark to-secondary"></div>
+        <div class="absolute inset-0 grain-overlay"></div>
+        
+        <!-- Formes décoratives -->
+        <div class="absolute top-20 right-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 left-10 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center text-white">
+                <span class="inline-flex items-center bg-white/10 backdrop-blur px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                    <i class="fas fa-store mr-2 text-accent"></i>
+                    Services & Produits Pro
+                </span>
+                
+                <h1 class="text-4xl md:text-6xl font-display font-extrabold mb-6 leading-tight">
+                    La Boutique du<br>
+                    <span class="text-accent">Technicien Malin</span>
+                </h1>
+                
+                <p class="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
+                    Contrats d'entretien <strong>sans engagement</strong> ou Kits DIY <strong>testés par Bastien</strong>.<br>
+                    Chaque produit inclut une vidéo tuto privée.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#services" class="bg-white text-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-cream transition shadow-lg inline-flex items-center justify-center">
+                        <i class="fas fa-calendar-check mr-2"></i> Contrats Entretien
+                    </a>
+                    <a href="#kits" class="bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-xl font-bold text-lg transition shadow-lg inline-flex items-center justify-center">
+                        <i class="fas fa-box-open mr-2"></i> Kits DIY Pro
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Vague décorative -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="#faf8f5"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Barre de confiance -->
+    <section class="py-8 bg-cream border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 text-center">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                        <i class="fas fa-truck text-primary text-xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="font-bold text-sm text-dark">Livraison 48h</p>
+                        <p class="text-xs text-gray-500">ou retrait gratuit Lattes</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
+                        <i class="fas fa-play-circle text-accent text-xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="font-bold text-sm text-dark">Vidéo Tuto Incluse</p>
+                        <p class="text-xs text-gray-500">avec chaque produit</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center">
+                        <i class="fas fa-headset text-secondary text-xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="font-bold text-sm text-dark">Support WhatsApp</p>
+                        <p class="text-xs text-gray-500">Bastien répond en personne</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-shield-alt text-green-600 text-xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="font-bold text-sm text-dark">Satisfait ou Remboursé</p>
+                        <p class="text-xs text-gray-500">14 jours pour changer d'avis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation Tabs -->
+    <section class="py-8 bg-white sticky top-20 z-40 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-center gap-4 md:gap-8">
+                <button onclick="showTab('services')" class="tab-btn active px-6 py-3 font-bold text-gray-600 hover:text-primary transition text-sm md:text-base" id="tab-services">
+                    <i class="fas fa-calendar-alt mr-2"></i>Contrats & Services
+                </button>
+                <button onclick="showTab('kits')" class="tab-btn px-6 py-3 font-bold text-gray-600 hover:text-primary transition text-sm md:text-base" id="tab-kits">
+                    <i class="fas fa-box mr-2"></i>Kits DIY Pro
+                </button>
+                <button onclick="showTab('syndics')" class="tab-btn px-6 py-3 font-bold text-gray-600 hover:text-primary transition text-sm md:text-base" id="tab-syndics">
+                    <i class="fas fa-building mr-2"></i>Offres Syndics
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- SECTION 1 : CONTRATS & SERVICES -->
+    <!-- ============================================== -->
+    <section id="services" class="tab-content active py-16 bg-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-dark mb-4">Contrats d'Entretien Annuels</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Un entretien par an, <strong>tarif préférentiel</strong>, et priorité d'intervention en cas de panne. Sans engagement, résiliable à tout moment.
+                </p>
+            </div>
+
+            <!-- Grille Services -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Contrat Chaudière Gaz -->
+                <div class="product-card bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100" itemscope itemtype="https://schema.org/Product">
+                    <div class="relative h-48 bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center">
+                        <i class="fas fa-fire text-white/30 text-8xl"></i>
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white text-orange-600 px-3 py-1 rounded-full text-xs font-bold">Obligatoire</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display font-bold text-xl mb-2" itemprop="name">Contrat Entretien Chaudière Gaz</h3>
+                        <p class="text-gray-500 text-sm mb-4" itemprop="description">Entretien annuel obligatoire. Nettoyage, contrôle CO, attestation officielle.</p>
+                        
+                        <ul class="space-y-2 mb-6 text-sm">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Nettoyage corps de chauffe</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Contrôle monoxyde de carbone</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Attestation pour assurance</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> -15% sur dépannages</li>
+                        </ul>
+                        
+                        <div class="flex items-end justify-between mb-4">
+                            <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <span class="text-gray-400 text-sm line-through">119€</span>
+                                <span class="text-3xl font-display font-bold text-primary" itemprop="price" content="99">99€</span>
+                                <span class="text-gray-500 text-sm">/an</span>
+                                <meta itemprop="priceCurrency" content="EUR">
+                            </div>
+                            <span class="text-xs text-green-600 font-semibold bg-green-50 px-2 py-1 rounded">Économisez 20€</span>
+                        </div>
+                        
+                        <a href="reservation.html?service=contrat-chaudiere-gaz&prix=99" class="btn-cart block w-full py-3 text-white font-bold text-center rounded-xl shadow-md">
+                            <i class="fas fa-calendar-plus mr-2"></i>Souscrire
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contrat PAC Air/Air -->
+                <div class="product-card bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 relative" itemscope itemtype="https://schema.org/Product">
+                    <div class="absolute top-4 right-4 z-10">
+                        <span class="tag-popular text-white px-3 py-1 rounded-full text-xs font-bold badge-pulse">⭐ Populaire</span>
+                    </div>
+                    <div class="relative h-48 bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center">
+                        <i class="fas fa-wind text-white/30 text-8xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display font-bold text-xl mb-2" itemprop="name">Contrat Entretien PAC Air/Air</h3>
+                        <p class="text-gray-500 text-sm mb-4" itemprop="description">Clim réversible mono ou multi-split. Nettoyage complet + désinfection.</p>
+                        
+                        <ul class="space-y-2 mb-6 text-sm">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Nettoyage unités int/ext</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Traitement bactéricide</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Contrôle étanchéité gaz</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> -15% sur dépannages</li>
+                        </ul>
+                        
+                        <div class="flex items-end justify-between mb-4">
+                            <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <span class="text-gray-400 text-sm line-through">149€</span>
+                                <span class="text-3xl font-display font-bold text-primary" itemprop="price" content="129">129€</span>
+                                <span class="text-gray-500 text-sm">/an</span>
+                                <meta itemprop="priceCurrency" content="EUR">
+                            </div>
+                            <span class="text-xs text-green-600 font-semibold bg-green-50 px-2 py-1 rounded">Économisez 20€</span>
+                        </div>
+                        
+                        <a href="reservation.html?service=contrat-pac-air-air&prix=129" class="btn-cart block w-full py-3 text-white font-bold text-center rounded-xl shadow-md">
+                            <i class="fas fa-calendar-plus mr-2"></i>Souscrire
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contrat PAC Air/Eau -->
+                <div class="product-card bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100" itemscope itemtype="https://schema.org/Product">
+                    <div class="relative h-48 bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center">
+                        <i class="fas fa-leaf text-white/30 text-8xl"></i>
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white text-green-600 px-3 py-1 rounded-full text-xs font-bold">RGE QualiPAC</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display font-bold text-xl mb-2" itemprop="name">Contrat Entretien PAC Air/Eau</h3>
+                        <p class="text-gray-500 text-sm mb-4" itemprop="description">Pompe à chaleur chauffage. Entretien complet du circuit hydraulique.</p>
+                        
+                        <ul class="space-y-2 mb-6 text-sm">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Contrôle circuit hydraulique</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Vérification pression/débit</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Nettoyage échangeur</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> -15% sur dépannages</li>
+                        </ul>
+                        
+                        <div class="flex items-end justify-between mb-4">
+                            <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <span class="text-gray-400 text-sm line-through">179€</span>
+                                <span class="text-3xl font-display font-bold text-primary" itemprop="price" content="149">149€</span>
+                                <span class="text-gray-500 text-sm">/an</span>
+                                <meta itemprop="priceCurrency" content="EUR">
+                            </div>
+                            <span class="text-xs text-green-600 font-semibold bg-green-50 px-2 py-1 rounded">Économisez 30€</span>
+                        </div>
+                        
+                        <a href="reservation.html?service=contrat-pac-air-eau&prix=149" class="btn-cart block w-full py-3 text-white font-bold text-center rounded-xl shadow-md">
+                            <i class="fas fa-calendar-plus mr-2"></i>Souscrire
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contrat Gainable -->
+                <div class="product-card bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100" itemscope itemtype="https://schema.org/Product">
+                    <div class="relative h-48 bg-gradient-to-br from-purple-400 to-indigo-500 flex items-center justify-center">
+                        <i class="fas fa-th-large text-white/30 text-8xl"></i>
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white text-purple-600 px-3 py-1 rounded-full text-xs font-bold">Premium</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display font-bold text-xl mb-2" itemprop="name">Contrat Entretien Gainable</h3>
+                        <p class="text-gray-500 text-sm mb-4" itemprop="description">Système gainable avec gaines. Nettoyage caisson + bouches + filtres.</p>
+                        
+                        <ul class="space-y-2 mb-6 text-sm">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Nettoyage caisson central</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Remplacement filtres</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Contrôle bouches soufflage</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> -15% sur dépannages</li>
+                        </ul>
+                        
+                        <div class="flex items-end justify-between mb-4">
+                            <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <span class="text-gray-400 text-sm line-through">199€</span>
+                                <span class="text-3xl font-display font-bold text-primary" itemprop="price" content="169">169€</span>
+                                <span class="text-gray-500 text-sm">/an</span>
+                                <meta itemprop="priceCurrency" content="EUR">
+                            </div>
+                            <span class="text-xs text-green-600 font-semibold bg-green-50 px-2 py-1 rounded">Économisez 30€</span>
+                        </div>
+                        
+                        <a href="reservation.html?service=contrat-gainable&prix=169" class="btn-cart block w-full py-3 text-white font-bold text-center rounded-xl shadow-md">
+                            <i class="fas fa-calendar-plus mr-2"></i>Souscrire
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contrat Multi-Split -->
+                <div class="product-card bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100" itemscope itemtype="https://schema.org/Product">
+                    <div class="relative h-48 bg-gradient-to-br from-blue-400 to-cyan-500 flex items-center justify-center">
+                        <i class="fas fa-clone text-white/30 text-8xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display font-bold text-xl mb-2" itemprop="name">Contrat Multi-Split (3-5 unités)</h3>
+                        <p class="text-gray-500 text-sm mb-4" itemprop="description">Pour les installations avec plusieurs unités intérieures.</p>
+                        
+                        <ul class="space-y-2 mb-6 text-sm">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Toutes unités nettoyées</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Groupe extérieur inclus</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Désinfection bactéricide</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> -15% sur dépannages</li>
+                        </ul>
+                        
+                        <div class="flex items-end justify-between mb-4">
+                            <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <span class="text-gray-400 text-sm line-through">229€</span>
+                                <span class="text-3xl font-display font-bold text-primary" itemprop="price" content="189">189€</span>
+                                <span class="text-gray-500 text-sm">/an</span>
+                                <meta itemprop="priceCurrency" content="EUR">
+                            </div>
+                            <span class="text-xs text-green-600 font-semibold bg-green-50 px-2 py-1 rounded">Économisez 40€</span>
+                        </div>
+                        
+                        <a href="reservation.html?service=contrat-multi-split&prix=189" class="btn-cart block w-full py-3 text-white font-bold text-center rounded-xl shadow-md">
+                            <i class="fas fa-calendar-plus mr-2"></i>Souscrire
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Pack Complet Maison -->
+                <div class="product-card bg-white rounded-3xl overflow-hidden shadow-xl border-2 border-accent relative" itemscope itemtype="https://schema.org/Product">
+                    <div class="absolute -top-1 -right-1 z-10">
+                        <div class="bg-accent text-white px-4 py-2 rounded-bl-2xl rounded-tr-2xl font-bold text-sm shadow-lg">
+                            🏆 BEST VALUE
+                        </div>
+                    </div>
+                    <div class="relative h-48 bg-gradient-to-br from-accent to-orange-500 flex items-center justify-center">
+                        <i class="fas fa-home text-white/30 text-8xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display font-bold text-xl mb-2" itemprop="name">Pack Maison Complète</h3>
+                        <p class="text-gray-500 text-sm mb-4" itemprop="description">Chaudière/PAC + Clim + Chauffe-eau. Le tout-en-un tranquillité.</p>
+                        
+                        <ul class="space-y-2 mb-6 text-sm">
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Entretien chauffage</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Entretien climatisation</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Contrôle chauffe-eau</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> <strong>-20% sur tous dépannages</strong></li>
+                        </ul>
+                        
+                        <div class="flex items-end justify-between mb-4">
+                            <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <span class="text-gray-400 text-sm line-through">350€</span>
+                                <span class="text-3xl font-display font-bold text-accent" itemprop="price" content="279">279€</span>
+                                <span class="text-gray-500 text-sm">/an</span>
+                                <meta itemprop="priceCurrency" content="EUR">
+                            </div>
+                            <span class="text-xs text-white font-semibold bg-accent px-2 py-1 rounded">-71€ !</span>
+                        </div>
+                        
+                        <a href="reservation.html?service=pack-maison-complete&prix=279" class="btn-cart block w-full py-3 text-white font-bold text-center rounded-xl shadow-md">
+                            <i class="fas fa-star mr-2"></i>Souscrire au Pack
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- SECTION 2 : KITS DIY PRO -->
+    <!-- ============================================== -->
+    <section id="kits" class="tab-content py-16 bg-warm-gray">
+        <div class="max-w-7xl mx-auto px-4">
+            
+            <div class="text-center mb-12">
+                <span class="inline-flex items-center bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-bold mb-4">
+                    <i class="fas fa-tools mr-2"></i>
+                    Testés & Approuvés par Bastien
+                </span>
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-dark mb-4">Kits DIY Professionnels</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Les mêmes produits que j'utilise sur mes chantiers. Chaque kit inclut une <strong>vidéo tuto privée</strong> et mon <strong>support WhatsApp</strong>.
+                </p>
+            </div>
+
+            <!-- Info vidéo -->
+            <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 mb-12 flex flex-col md:flex-row items-center gap-6">
+                <div class="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center shrink-0">
+                    <i class="fas fa-play text-white text-2xl"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg text-dark mb-2">🎬 Chaque Kit = 1 Vidéo Tuto Privée</h3>
+                    <p class="text-gray-600 text-sm">
+                        Après votre achat, vous recevez un lien vers ma vidéo explicative (10-15 min). Je vous montre exactement comment faire, étape par étape, comme si j'étais chez vous. Et si vous bloquez ? Envoyez-moi une photo sur WhatsApp, je réponds sous 24h.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Grille Kits -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Kit Entretien Clim Split -->
+                <div class="product-card bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 relative" itemscope itemtype="https://schema.org/Product">
+                    <div class="absolute top-4 right-4 z-10">
+                        <span class="tag-popular text-white px-3 py-1 rounded-full text-xs font-bold badge-pulse">🔥 Best-Seller</span>
+                    </div>
+                    <div class="relative h-56 bg-gradient-to-br from-cyan-100 to-blue-100 flex items-center justify-center overflow-hidden group">
+                        <!-- Placeholder image - à remplacer par vraie photo -->
+                        <div class="text-center">
+                            <i class="fas fa-box-open text-cyan-300 text-6xl mb-2"></i>
+                            <p class="text-cyan-400 text-xs">Photo à venir</p>
+                        </div>
+                        <!-- Overlay vidéo -->
+                        <div class="absolute inset-0 video-overlay flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer">
+                            <div class="text-center text-white">
+                                <i class="fas fa-play-circle text-5xl mb-2"></i>
+                                <p class="text-sm font-semibold">Voir la vidéo tuto</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="bg-cyan-100 text-cyan-700 px-2 py-1 rounded text-xs font-semibold">Climatisation</span>
+                            <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs font-semibold">Facile</span>
+                        </div>
+                        <h3 class="font-display font-bold text-xl mb-2" itemprop="name">Kit Entretien Clim Split</h3>
+                        <p class="text-gray-500 text-sm mb-4" itemprop="description">Tout pour nettoyer et désinfecter votre climatiseur mural comme un pro.</p>
+                        
+                        <div class="bg-gray-50 rounded-xl p-4 mb-4">
+                            <p class="text-xs font-bold text-gray-700 mb-2">CONTENU DU KIT :</p>
+                            <ul class="space-y-1 text-xs text-gray-600">
+                                <li>• Spray mousse nettoyant évaporateur 400ml</li>
+                                <li>• Spray désinfectant bactéricide 400ml</li>
+                                <li>• Peigne redresseur d'ailettes</li>
+                                <li>• Brosse douce pour filtres</li>
+                                <li>• Chiffon microfibre pro</li>
+                                <li>• <strong class="text-primary">QR Code → Vidéo Tuto Bastien</strong></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex items-end justify-between mb-4">
+                            <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <span class="text-3xl font-display font-bold text-primary" itemprop="price" content="39">39€</span>
+                                <span class="text-gray-500 text-sm">TTC</span>
+                                <meta itemprop="priceCurrency" content="EUR">
+                                <p class="text-xs text-gray-400">+ 5,90€ livraison</p>
+                            </div>
+                        </div>
+                        
+                        <a href="reservation.html?produit=kit-clim-split&prix=39" class="btn-cart block w-full py-3 text-white font-bold text-center rounded-xl shadow-md">
+                            <i class="fas fa-shopping-cart mr-2"></i>Commander
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kit Entretien Gainable -->
+                <div class="product-card bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100" itemscope itemtype="https://schema.org/Product">
+                    <div class="absolute top-4 left-4 z-10">
+                        <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-bold">Premium</span>
+                    </div>
+                    <div class="relative h-56 bg-gradient-to-br from-purple-100 to-indigo-100 flex items-center justify-center overflow-hidden group">
+                        <div class="text-center">
+                            <i class="fas fa-box-open text-purple-300 text-6xl mb-2"></i>
+                            <p class="text-purple-400 text-xs">Photo à venir</p>
+                        </div>
+                        <div class="absolute inset-0 video-overlay flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer">
+                            <div class="text-center text-white">
+                                <i class="fas fa-play-circle text-5xl mb-2"></i>
+                                <p class="text-sm font-semibold">Voir la vidéo tuto</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs font-semibold">Gainable</span>
+                            <span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded text-xs font-semibold">Intermédiaire</span>
+                        </div>
+                        <h3 class="font-display font-bold text-xl mb-2" itemprop="name">Kit Entretien Gainable</h3>
+                        <p class="text-gray-500 text-sm mb-4" itemprop="description">Nettoyage caisson, filtres et bouches de soufflage pour système gainable.</p>
+                        
+                        <div class="bg-gray-50 rounded-xl p-4 mb-4">
+                            <p class="text-xs font-bold text-gray-700 mb-2">CONTENU DU KIT :</p>
+                            <ul class="space-y-1 text-xs text-gray-600">
+                                <li>• Spray nettoyant PRO évaporateur 750ml</li>
+                                <li>• Spray désinfectant bactéricide 400ml</li>
+                                <li>• Filtre de remplacement universel G4</li>
+                                <li>• Brosse longue flexible pour gaines</li>
+                                <li>• Chiffon microfibre XL</li>
+                                <li>• <strong class="text-primary">QR Code → Vidéo Tuto Bastien</strong></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex items-end justify-between mb-4">
+                            <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <span class="text-3xl font-display font-bold text-primary" itemprop="price" content="59">59€</span>
+                                <span class="text-gray-500 text-sm">TTC</span>
+                                <meta itemprop="priceCurrency" content="EUR">
+                                <p class="text-xs text-gray-400">+ 5,90€ livraison</p>
+                            </div>
+                        </div>
+                        
+                        <a href="reservation.html?produit=kit-gainable&prix=59" class="btn-cart block w-full py-3 text-white font-bold text-center rounded-xl shadow-md">
+                            <i class="fas fa-shopping-cart mr-2"></i>Commander
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kit Entretien Adoucisseur -->
+                <div class="product-card bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100" itemscope itemtype="https://schema.org/Product">
+                    <div class="relative h-56 bg-gradient-to-br from-blue-100 to-cyan-100 flex items-center justify-center overflow-hidden group">
+                        <div class="text-center">
+                            <i class="fas fa-box-open text-blue-300 text-6xl mb-2"></i>
+                            <p class="text-blue-400 text-xs">Photo à venir</p>
+                        </div>
+                        <div class="absolute inset-0 video-overlay flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer">
+                            <div class="text-center text-white">
+                                <i class="fas fa-play-circle text-5xl mb-2"></i>
+                                <p class="text-sm font-semibold">Voir la vidéo tuto</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-semibold">Plomberie</span>
+                            <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs font-semibold">Facile</span>
+                        </div>
+                        <h3 class="font-display font-bold text-xl mb-2" itemprop="name">Kit Entretien Adoucisseur</h3>
+                        <p class="text-gray-500 text-sm mb-4" itemprop="description">Régénération et entretien de votre adoucisseur d'eau.</p>
+                        
+                        <div class="bg-gray-50 rounded-xl p-4 mb-4">
+                            <p class="text-xs font-bold text-gray-700 mb-2">CONTENU DU KIT :</p>
+                            <ul class="space-y-1 text-xs text-gray-600">
+                                <li>• Nettoyant résine professionnel 500ml</li>
+                                <li>• Bandelettes test dureté (x10)</li>
+                                <li>• Carnet de suivi régénération</li>
+                                <li>• Guide réglages par marque</li>
+                                <li>• <strong class="text-primary">QR Code → Vidéo Tuto Bastien</strong></li>
+                            </ul>
+                            <p class="text-xs text-gray-500 mt-2 italic">💡 Sel non inclus (trop lourd). Achetez local !</p>
+                        </div>
+                        
+                        <div class="flex items-end justify-between mb-4">
+                            <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <span class="text-3xl font-display font-bold text-primary" itemprop="price" content="35">35€</span>
+                                <span class="text-gray-500 text-sm">TTC</span>
+                                <meta itemprop="priceCurrency" content="EUR">
+                                <p class="text-xs text-gray-400">+ 5,90€ livraison</p>
+                            </div>
+                        </div>
+                        
+                        <a href="reservation.html?produit=kit-adoucisseur&prix=35" class="btn-cart block w-full py-3 text-white font-bold text-center rounded-xl shadow-md">
+                            <i class="fas fa-shopping-cart mr-2"></i>Commander
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kit Désembouage Chimique -->
+                <div class="product-card bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100" itemscope itemtype="https://schema.org/Product">
+                    <div class="absolute top-4 left-4 z-10">
+                        <span class="bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold">Technique</span>
+                    </div>
+                    <div class="relative h-56 bg-gradient-to-br from-orange-100 to-red-100 flex items-center justify-center overflow-hidden group">
+                        <div class="text-center">
+                            <i class="fas fa-box-open text-orange-300 text-6xl mb-2"></i>
+                            <p class="text-orange-400 text-xs">Photo à venir</p>
+                        </div>
+                        <div class="absolute inset-0 video-overlay flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer">
+                            <div class="text-center text-white">
+                                <i class="fas fa-play-circle text-5xl mb-2"></i>
+                                <p class="text-sm font-semibold">Voir la vidéo tuto</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs font-semibold">Chauffage</span>
+                            <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-semibold">Avancé</span>
+                        </div>
+                        <h3 class="font-display font-bold text-xl mb-2" itemprop="name">Kit Désembouage Chimique</h3>
+                        <p class="text-gray-500 text-sm mb-4" itemprop="description">Nettoyage chimique de votre circuit de chauffage (radiateurs froids en bas).</p>
+                        
+                        <div class="bg-gray-50 rounded-xl p-4 mb-4">
+                            <p class="text-xs font-bold text-gray-700 mb-2">CONTENU DU KIT :</p>
+                            <ul class="space-y-1 text-xs text-gray-600">
+                                <li>• Désembouant chimique 1L (100L circuit)</li>
+                                <li>• Inhibiteur de corrosion 500ml</li>
+                                <li>• Pot de récupération boue</li>
+                                <li>• Seringue de prélèvement</li>
+                                <li>• <strong class="text-primary">QR Code → Vidéo Tuto Bastien</strong></li>
+                            </ul>
+                            <p class="text-xs text-orange-600 mt-2 font-semibold">⚠️ Si trop boueux → Contactez-moi pour désembouage hydro</p>
+                        </div>
+                        
+                        <div class="flex items-end justify-between mb-4">
+                            <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <span class="text-3xl font-display font-bold text-primary" itemprop="price" content="49">49€</span>
+                                <span class="text-gray-500 text-sm">TTC</span>
+                                <meta itemprop="priceCurrency" content="EUR">
+                                <p class="text-xs text-gray-400">+ 7,90€ livraison (produit lourd)</p>
+                            </div>
+                        </div>
+                        
+                        <a href="reservation.html?produit=kit-desembouage&prix=49" class="btn-cart block w-full py-3 text-white font-bold text-center rounded-xl shadow-md">
+                            <i class="fas fa-shopping-cart mr-2"></i>Commander
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kit Urgence Plomberie -->
+                <div class="product-card bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100" itemscope itemtype="https://schema.org/Product">
+                    <div class="relative h-56 bg-gradient-to-br from-red-100 to-pink-100 flex items-center justify-center overflow-hidden group">
+                        <div class="text-center">
+                            <i class="fas fa-box-open text-red-300 text-6xl mb-2"></i>
+                            <p class="text-red-400 text-xs">Photo à venir</p>
+                        </div>
+                        <div class="absolute inset-0 video-overlay flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer">
+                            <div class="text-center text-white">
+                                <i class="fas fa-play-circle text-5xl mb-2"></i>
+                                <p class="text-sm font-semibold">Voir la vidéo tuto</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-semibold">Urgence</span>
+                            <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs font-semibold">Indispensable</span>
+                        </div>
+                        <h3 class="font-display font-bold text-xl mb-2" itemprop="name">Kit Urgence Plomberie</h3>
+                        <p class="text-gray-500 text-sm mb-4" itemprop="description">Les essentiels pour stopper une fuite en attendant le pro.</p>
+                        
+                        <div class="bg-gray-50 rounded-xl p-4 mb-4">
+                            <p class="text-xs font-bold text-gray-700 mb-2">CONTENU DU KIT :</p>
+                            <ul class="space-y-1 text-xs text-gray-600">
+                                <li>• Ruban téflon PRO haute densité</li>
+                                <li>• Mastic époxy bi-composant</li>
+                                <li>• Lot joints toriques universels (x20)</li>
+                                <li>• Clé à molette compacte</li>
+                                <li>• Carte urgence Bastien 24/7</li>
+                                <li>• <strong class="text-primary">QR Code → Vidéo "Stopper une fuite"</strong></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex items-end justify-between mb-4">
+                            <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <span class="text-3xl font-display font-bold text-primary" itemprop="price" content="29">29€</span>
+                                <span class="text-gray-500 text-sm">TTC</span>
+                                <meta itemprop="priceCurrency" content="EUR">
+                                <p class="text-xs text-gray-400">+ 4,90€ livraison</p>
+                            </div>
+                        </div>
+                        
+                        <a href="reservation.html?produit=kit-urgence-plomberie&prix=29" class="btn-cart block w-full py-3 text-white font-bold text-center rounded-xl shadow-md">
+                            <i class="fas fa-shopping-cart mr-2"></i>Commander
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kit Complet Maison (Bundle) -->
+                <div class="product-card bg-white rounded-3xl overflow-hidden shadow-xl border-2 border-accent relative" itemscope itemtype="https://schema.org/Product">
+                    <div class="absolute -top-1 -right-1 z-10">
+                        <div class="bg-accent text-white px-4 py-2 rounded-bl-2xl rounded-tr-2xl font-bold text-sm shadow-lg">
+                            💰 PACK -25%
+                        </div>
+                    </div>
+                    <div class="relative h-56 bg-gradient-to-br from-accent/20 to-orange-100 flex items-center justify-center overflow-hidden group">
+                        <div class="text-center">
+                            <i class="fas fa-boxes text-accent/50 text-6xl mb-2"></i>
+                            <p class="text-accent text-xs font-semibold">3 KITS EN 1</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="bg-accent/20 text-accent px-2 py-1 rounded text-xs font-semibold">Bundle</span>
+                            <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs font-semibold">Économique</span>
+                        </div>
+                        <h3 class="font-display font-bold text-xl mb-2" itemprop="name">Pack Bricoleur Complet</h3>
+                        <p class="text-gray-500 text-sm mb-4" itemprop="description">Kit Clim + Kit Adoucisseur + Kit Urgence = Tout pour être autonome.</p>
+                        
+                        <div class="bg-accent/5 border border-accent/20 rounded-xl p-4 mb-4">
+                            <p class="text-xs font-bold text-accent mb-2">CONTENU DU PACK :</p>
+                            <ul class="space-y-1 text-xs text-gray-600">
+                                <li>✅ Kit Entretien Clim Split (39€)</li>
+                                <li>✅ Kit Entretien Adoucisseur (35€)</li>
+                                <li>✅ Kit Urgence Plomberie (29€)</li>
+                                <li>🎬 <strong>3 Vidéos Tuto Bastien</strong></li>
+                            </ul>
+                            <div class="mt-3 pt-3 border-t border-accent/20">
+                                <p class="text-sm"><span class="line-through text-gray-400">103€</span> → <strong class="text-accent text-lg">77€</strong></p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-end justify-between mb-4">
+                            <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <span class="text-3xl font-display font-bold text-accent" itemprop="price" content="77">77€</span>
+                                <span class="text-gray-500 text-sm">TTC</span>
+                                <meta itemprop="priceCurrency" content="EUR">
+                                <p class="text-xs text-green-600 font-semibold">Livraison OFFERTE !</p>
+                            </div>
+                        </div>
+                        
+                        <a href="reservation.html?produit=pack-bricoleur-complet&prix=77" class="btn-cart block w-full py-3 text-white font-bold text-center rounded-xl shadow-md">
+                            <i class="fas fa-star mr-2"></i>Commander le Pack
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- SECTION 3 : OFFRES SYNDICS -->
+    <!-- ============================================== -->
+    <section id="syndics" class="tab-content py-16 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            
+            <div class="text-center mb-12">
+                <span class="inline-flex items-center bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-bold mb-4">
+                    <i class="fas fa-building mr-2"></i>
+                    Professionnels de l'Immobilier
+                </span>
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">Contrats Astreinte Syndics & Bailleurs</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Un seul interlocuteur pour toutes vos urgences techniques. Intervention prioritaire, rapport photo immédiat, facturation claire.
+                </p>
+            </div>
+
+            <!-- Grille Offres Pro -->
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Bronze -->
+                <div class="bg-gray-800 rounded-3xl p-8 border border-gray-700 hover:border-orange-400 transition">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-orange-900/50 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-medal text-orange-400 text-2xl"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-2xl text-orange-400">Bronze</h3>
+                        <p class="text-gray-500 text-sm">1 à 3 lots gérés</p>
+                    </div>
+                    
+                    <div class="text-center mb-6">
+                        <span class="text-4xl font-display font-bold">49€</span>
+                        <span class="text-gray-400">/mois</span>
+                    </div>
+                    
+                    <ul class="space-y-3 mb-8 text-sm">
+                        <li class="flex items-center"><i class="fas fa-check text-orange-400 mr-3"></i> Intervention sous 4h (jours ouvrés)</li>
+                        <li class="flex items-center"><i class="fas fa-check text-orange-400 mr-3"></i> Rapport photo par email</li>
+                        <li class="flex items-center"><i class="fas fa-check text-orange-400 mr-3"></i> Tarifs préférentiels (-10%)</li>
+                        <li class="flex items-center text-gray-500"><i class="fas fa-times text-gray-600 mr-3"></i> Astreinte week-end</li>
+                    </ul>
+                    
+                    <a href="contact.html?offre=syndic-bronze" class="block w-full py-3 border-2 border-orange-400 text-orange-400 font-bold text-center rounded-xl hover:bg-orange-400 hover:text-gray-900 transition">
+                        Demander un Devis
+                    </a>
+                </div>
+
+                <!-- Silver -->
+                <div class="bg-gray-800 rounded-3xl p-8 border-2 border-gray-400 relative transform scale-105 shadow-2xl">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-gray-400 text-gray-900 px-4 py-1 rounded-full text-xs font-bold">RECOMMANDÉ</span>
+                    </div>
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-gray-600/50 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-medal text-gray-300 text-2xl"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-2xl text-gray-300">Silver</h3>
+                        <p class="text-gray-500 text-sm">4 à 10 lots gérés</p>
+                    </div>
+                    
+                    <div class="text-center mb-6">
+                        <span class="text-4xl font-display font-bold">99€</span>
+                        <span class="text-gray-400">/mois</span>
+                    </div>
+                    
+                    <ul class="space-y-3 mb-8 text-sm">
+                        <li class="flex items-center"><i class="fas fa-check text-gray-300 mr-3"></i> Intervention sous 2h (jours ouvrés)</li>
+                        <li class="flex items-center"><i class="fas fa-check text-gray-300 mr-3"></i> Rapport photo + vidéo</li>
+                        <li class="flex items-center"><i class="fas fa-check text-gray-300 mr-3"></i> Tarifs préférentiels (-15%)</li>
+                        <li class="flex items-center"><i class="fas fa-check text-gray-300 mr-3"></i> Astreinte samedi matin</li>
+                    </ul>
+                    
+                    <a href="contact.html?offre=syndic-silver" class="block w-full py-3 bg-gray-400 text-gray-900 font-bold text-center rounded-xl hover:bg-white transition">
+                        Demander un Devis
+                    </a>
+                </div>
+
+                <!-- Gold -->
+                <div class="bg-gradient-to-br from-yellow-900/30 to-amber-900/30 rounded-3xl p-8 border border-yellow-600 hover:border-yellow-400 transition">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-yellow-900/50 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-crown text-yellow-400 text-2xl"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-2xl text-yellow-400">Gold</h3>
+                        <p class="text-gray-500 text-sm">10+ lots ou copropriété</p>
+                    </div>
+                    
+                    <div class="text-center mb-6">
+                        <span class="text-4xl font-display font-bold text-yellow-400">199€</span>
+                        <span class="text-gray-400">/mois</span>
+                    </div>
+                    
+                    <ul class="space-y-3 mb-8 text-sm">
+                        <li class="flex items-center"><i class="fas fa-check text-yellow-400 mr-3"></i> <strong>Intervention sous 1h 24/7</strong></li>
+                        <li class="flex items-center"><i class="fas fa-check text-yellow-400 mr-3"></i> Rapport complet + devis assurance</li>
+                        <li class="flex items-center"><i class="fas fa-check text-yellow-400 mr-3"></i> Tarifs préférentiels (-20%)</li>
+                        <li class="flex items-center"><i class="fas fa-check text-yellow-400 mr-3"></i> <strong>Astreinte 7j/7 incluse</strong></li>
+                        <li class="flex items-center"><i class="fas fa-check text-yellow-400 mr-3"></i> Interlocuteur dédié (ligne directe)</li>
+                    </ul>
+                    
+                    <a href="contact.html?offre=syndic-gold" class="block w-full py-3 bg-yellow-500 text-gray-900 font-bold text-center rounded-xl hover:bg-yellow-400 transition">
+                        Demander un Devis
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- CTA Syndics -->
+            <div class="mt-16 text-center">
+                <p class="text-gray-400 mb-4">Vous gérez une copropriété ou un parc locatif ?</p>
+                <a href="tel:0649955298" class="inline-flex items-center bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-xl font-bold text-lg transition">
+                    <i class="fas fa-phone-alt mr-3"></i>
+                    Discutons de vos besoins : 06 49 95 52 98
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Photos IA (Conseil) -->
+    <section class="py-16 bg-cream">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-white rounded-3xl p-8 shadow-lg border border-gray-100">
+                <div class="flex items-start gap-6">
+                    <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center shrink-0">
+                        <i class="fas fa-camera text-purple-600 text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display font-bold text-xl text-dark mb-3">💡 Conseil Photo Produits</h3>
+                        <p class="text-gray-600 mb-4">
+                            Pour tes photos de kits, voici ma recommandation :
+                        </p>
+                        <div class="bg-gray-50 rounded-xl p-4 text-sm text-gray-700 space-y-2">
+                            <p><strong>📸 Option 1 - Photo maison (recommandé pour l'authenticité) :</strong></p>
+                            <ul class="list-disc list-inside ml-4 space-y-1 text-gray-600">
+                                <li>Fond neutre (planche bois, béton ciré, ou ton établi)</li>
+                                <li>Lumière naturelle près d'une fenêtre</li>
+                                <li>Tous les produits bien disposés avec ta main qui tient un élément</li>
+                                <li>Ajoute ta carte de visite Multitech34 dans le cadre</li>
+                            </ul>
+                            <p class="mt-4"><strong>🤖 Option 2 - IA pour mockups pro :</strong></p>
+                            <ul class="list-disc list-inside ml-4 space-y-1 text-gray-600">
+                                <li>Utilise <strong>Midjourney</strong> ou <strong>DALL-E</strong> pour créer des packshots stylisés</li>
+                                <li>Prompt exemple : <em>"Professional product photography of a cleaning kit for air conditioning, white background, soft shadows, premium packaging"</em></li>
+                                <li>⚠️ Attention : ne montre pas de faux produits, juste le concept de packaging</li>
+                            </ul>
+                            <p class="mt-4 text-primary font-semibold">Ma reco : Commence par des photos maison authentiques. L'IA peut créer les visuels du packaging une fois que tu as défini ton branding.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0f2f24] text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+                <h3 class="text-2xl font-display font-bold mb-4">Multitech34</h3>
+                <p class="text-green-100 text-sm mb-6">La boutique du technicien malin. Services pro et kits DIY testés sur le terrain.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Boutique</h4>
+                <ul class="space-y-2 text-sm text-green-100">
+                    <li><a href="#services" class="hover:text-white transition">Contrats Entretien</a></li>
+                    <li><a href="#kits" class="hover:text-white transition">Kits DIY Pro</a></li>
+                    <li><a href="#syndics" class="hover:text-white transition">Offres Syndics</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Services</h4>
+                <ul class="space-y-2 text-sm text-green-100">
+                    <li><a href="plomberie.html" class="hover:text-white transition">Plomberie</a></li>
+                    <li><a href="chauffage.html" class="hover:text-white transition">Chauffage</a></li>
+                    <li><a href="climatisation.html" class="hover:text-white transition">Climatisation</a></li>
+                    <li><a href="depannage.html" class="hover:text-white transition">Multiservices</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Contact</h4>
+                <p class="text-sm text-green-100 mb-2"><a href="tel:0649955298" class="hover:text-white transition"><i class="fas fa-phone mr-2"></i> 06 49 95 52 98</a></p>
+                <p class="text-sm text-green-100 mb-2"><a href="/cdn-cgi/l/email-protection#b0d2d1d2d6d5c2c2d5c2f0d9d3dcdfc5d49ed3dfdd" class="hover:text-white transition"><i class="fas fa-envelope mr-2"></i> <span class="__cf_email__" data-cfemail="d9bbb8bbbfbcababbcab99b0bab5b6acbdf7bab6b4">[email&#160;protected]</span></a></p>
+                <p class="text-sm text-green-100"><i class="fas fa-map-marker-alt mr-2"></i> Lattes (34970)</p>
+            </div>
+        </div>
+        <div class="border-t border-green-900 pt-8 text-center">
+            <p class="text-sm text-green-200 mb-2">© 2025 Multitech34. Tous droits réservés.</p>
+            <p class="text-sm font-medium italic text-green-100 opacity-90">
+                "Créé avec IAmour pour <span class="text-red-500 animate-pulse">❤️</span> Lucille <span class="text-red-500 animate-pulse">❤️</span> Grâce à Dieu, pour sa gloire."
+            </p>
+        </div>
+    </footer>
+
+    <!-- Madison Widget -->
+    <div class="madison-widget">
+        <button onclick="toggleMadison()" class="madison-button"><i class="fas fa-comment-dots"></i></button>
+        <div id="madisonChat" class="madison-chat">
+            <div id="madisonMessages" class="flex-1 p-4 overflow-y-auto bg-gray-50"></div>
+            <div class="p-4 bg-white border-t flex gap-2">
+                <input type="text" id="madisonInput" placeholder="Une question sur la boutique ?" class="flex-1 border rounded-full px-4 py-2 text-sm focus:outline-none">
+                <button onclick="sendMessage()" class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="multitech34.js"></script>
+    <script>
+        // Gestion des tabs
+        function showTab(tabName) {
+            // Masquer tous les contenus
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Désactiver tous les boutons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Afficher le contenu sélectionné
+            document.getElementById(tabName).classList.add('active');
+            
+            // Activer le bouton correspondant
+            document.getElementById('tab-' + tabName).classList.add('active');
+            
+            // Scroll vers la section
+            document.getElementById(tabName).scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Menu mobile
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        if(btn && menu) {
+            btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+        }
+
+        // Gestion des ancres depuis l'URL
+        window.addEventListe

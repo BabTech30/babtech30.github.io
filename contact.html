@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr" itemscope itemtype="https://schema.org/ContactPage">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Optimisé -->
+    <title>Contact Bastien Multitech34 : Urgence & Devis Gratuit | Montpellier</title>
+    <meta name="description" content="Contactez Bastien pour une urgence ou un devis gratuit. Formulaire rapide ou appel direct 24h/24. Plomberie, chauffage, climatisation à Montpellier et Lattes.">
+    
+    <link rel="canonical" href="https://www.multi-technique-montpellier.fr/contact.html">
+    
+    <!-- CSS Production -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Style pour les boutons radio */
+        .service-radio:checked + .service-card {
+            border-color: var(--color-primary);
+            background-color: #f0fdf4;
+            transform: scale(1.05);
+            box-shadow: var(--shadow-md);
+        }
+        .service-radio:checked + .service-card i {
+            color: var(--color-primary);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50" id="navbar">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex flex-col group">
+                    <span class="text-2xl font-bold text-primary tracking-tight group-hover:text-accent transition">Multitech34</span>
+                    <span class="text-xs text-gray-500 font-medium">Bastien - Artisan Expert</span>
+                </a>
+                
+                <div class="hidden lg:flex items-center gap-6">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                    <a href="plomberie.html" class="nav-link">Plomberie</a>
+                    <a href="chauffage.html" class="nav-link">Chauffage</a>
+                    <a href="climatisation.html" class="nav-link">Clim</a>
+                    <a href="depannage.html" class="nav-link">Multiservices</a>
+                    <a href="boutique.html" class="nav-link text-accent">Boutique</a>
+                    <a href="contact.html" class="btn btn-primary">Contact</a>
+                </div>
+
+                <a href="tel:0649955298" class="hidden md:inline-flex items-center px-4 py-2 border-2 border-accent text-accent font-bold rounded-lg hover:bg-accent hover:text-white transition lg:ml-4">
+                    <i class="fas fa-phone-alt mr-2"></i> 06 49 95 52 98
+                </a>
+                
+                <div class="lg:hidden flex items-center gap-4">
+                    <a href="tel:0649955298" class="text-accent text-xl"><i class="fas fa-phone"></i></a>
+                    <button id="mobile-menu-button" class="p-2 border border-gray-200 rounded">
+                        <i class="fas fa-bars text-2xl text-gray-700"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-xl">
+            <div class="px-4 py-4 space-y-2">
+                <a href="index.html" class="block px-3 py-3 rounded-md font-bold text-gray-800 hover:bg-gray-50 border-b border-gray-100">🏠 Accueil</a>
+                <a href="plomberie.html" class="block px-3 py-3 rounded-md font-medium text-gray-700 hover:bg-gray-50">💧 Plomberie</a>
+                <a href="chauffage.html" class="block px-3 py-3 rounded-md font-medium text-gray-700 hover:bg-gray-50">🔥 Chauffage</a>
+                <a href="climatisation.html" class="block px-3 py-3 rounded-md font-medium text-gray-700 hover:bg-gray-50">❄️ Climatisation</a>
+                <a href="depannage.html" class="block px-3 py-3 rounded-md font-medium text-gray-700 hover:bg-gray-50">🛠️ Multiservices</a>
+                <a href="boutique.html" class="block px-3 py-3 rounded-md font-medium text-accent hover:bg-orange-50">🛒 Boutique</a>
+                <a href="contact.html" class="block px-3 py-3 rounded-md font-bold text-white bg-primary mt-4 text-center">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenu Principal -->
+    <section class="pt-32 pb-20 bg-gray-50 min-h-screen">
+        <div class="max-w-4xl mx-auto px-4">
+            
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <span class="bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider">La ligne directe</span>
+                <h1 class="text-3xl md:text-5xl font-extrabold mt-4 mb-4 text-dark">Comment puis-je vous aider ?</h1>
+                <p class="text-gray-600 text-lg">Sélectionnez votre situation pour une réponse adaptée.</p>
+            </div>
+
+            <!-- Bloc Urgence -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden mb-8 border-l-8 border-accent hover:shadow-2xl transition">
+                <div class="p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="flex items-center gap-6">
+                        <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-3xl shrink-0">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-900">C'est une Urgence !</h2>
+                            <p class="text-gray-500">Fuite majeure, plus de chauffage, panne électrique...</p>
+                        </div>
+                    </div>
+                    <a href="tel:0649955298" class="w-full md:w-auto bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-xl font-bold text-xl flex items-center justify-center gap-3 transition shadow-lg">
+                        <i class="fas fa-phone-alt"></i> Appeler Bastien (24/7)
+                    </a>
+                </div>
+            </div>
+
+            <!-- Formulaire -->
+            <div class="bg-white rounded-3xl shadow-xl p-8 md:p-10">
+                <h2 class="text-2xl font-bold text-gray-900 mb-8 flex items-center">
+                    <i class="fas fa-clipboard-list text-primary mr-3"></i> Demande de Devis / Intervention
+                </h2>
+
+                <form action="https://formsubmit.co/babferrer@icloud.com" method="POST" class="space-y-8">
+                    <!-- FormSubmit Config -->
+                    <input type="hidden" name="_subject" value="Nouvelle demande via le site Multitech34">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://www.multi-technique-montpellier.fr/confirmation.html">
+                    
+                    <!-- Type de service -->
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-4 uppercase tracking-wide">Quel est le problème ?</label>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <label class="cursor-pointer relative">
+                                <input type="radio" name="service" class="service-radio sr-only" value="plomberie">
+                                <div class="service-card border-2 border-gray-100 rounded-xl p-4 text-center hover:border-primary/50 transition bg-white h-full flex flex-col items-center justify-center gap-2">
+                                    <i class="fas fa-faucet text-3xl text-gray-400"></i>
+                                    <span class="font-bold text-sm text-gray-700">Plomberie</span>
+                                </div>
+                            </label>
+
+                            <label class="cursor-pointer relative">
+                                <input type="radio" name="service" class="service-radio sr-only" value="chauffage">
+                                <div class="service-card border-2 border-gray-100 rounded-xl p-4 text-center hover:border-primary/50 transition bg-white h-full flex flex-col items-center justify-center gap-2">
+                                    <i class="fas fa-fire text-3xl text-gray-400"></i>
+                                    <span class="font-bold text-sm text-gray-700">Chauffage</span>
+                                </div>
+                            </label>
+
+                            <label class="cursor-pointer relative">
+                                <input type="radio" name="service" class="service-radio sr-only" value="clim">
+                                <div class="service-card border-2 border-gray-100 rounded-xl p-4 text-center hover:border-primary/50 transition bg-white h-full flex flex-col items-center justify-center gap-2">
+                                    <i class="fas fa-snowflake text-3xl text-gray-400"></i>
+                                    <span class="font-bold text-sm text-gray-700">Climatisation</span>
+                                </div>
+                            </label>
+
+                            <label class="cursor-pointer relative">
+                                <input type="radio" name="service" class="service-radio sr-only" value="multiservices">
+                                <div class="service-card border-2 border-gray-100 rounded-xl p-4 text-center hover:border-primary/50 transition bg-white h-full flex flex-col items-center justify-center gap-2">
+                                    <i class="fas fa-tools text-3xl text-gray-400"></i>
+                                    <span class="font-bold text-sm text-gray-700">Bricolage / Autre</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Nom & Téléphone -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Votre Nom</label>
+                            <div class="relative">
+                                <i class="fas fa-user absolute left-4 top-3.5 text-gray-400"></i>
+                                <input type="text" name="nom" required class="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition bg-gray-50 focus:bg-white" placeholder="Ex: Jean Dupont">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Téléphone (Important)</label>
+                            <div class="relative">
+                                <i class="fas fa-phone absolute left-4 top-3.5 text-gray-400"></i>
+                                <input type="tel" name="telephone" required class="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition bg-gray-50 focus:bg-white" placeholder="06 .. .. .. ..">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Email (optionnel)</label>
+                        <div class="relative">
+                            <i class="fas fa-envelope absolute left-4 top-3.5 text-gray-400"></i>
+                            <input type="email" name="email" class="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition bg-gray-50 focus:bg-white" placeholder="votre@email.com">
+                        </div>
+                    </div>
+
+                    <!-- Ville -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Ville d'intervention</label>
+                        <div class="relative">
+                            <i class="fas fa-map-marker-alt absolute left-4 top-3.5 text-gray-400"></i>
+                            <input type="text" name="ville" required class="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition bg-gray-50 focus:bg-white" placeholder="Ex: Lattes, Montpellier Centre, Palavas...">
+                        </div>
+                    </div>
+
+                    <!-- Détails -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Détails (Optionnel)</label>
+                        <textarea name="details" rows="3" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition bg-gray-50 focus:bg-white" placeholder="Si vous avez des détails... (Ex: 3ème étage, code porte...)"></textarea>
+                    </div>
+
+                    <!-- Submit -->
+                    <button type="submit" class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition flex items-center justify-center gap-3">
+                        <span>Envoyer ma demande</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                    
+                    <p class="text-center text-xs text-gray-400 mt-4">
+                        <i class="fas fa-lock mr-1"></i> Vos données sont confidentielles. Bastien vous répond sous 2h.
+                    </p>
+                </form>
+            </div>
+
+            <!-- Infos complémentaires -->
+            <div class="mt-12 grid md:grid-cols-3 gap-6 text-center">
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="text-accent text-2xl mb-2"><i class="fas fa-clock"></i></div>
+                    <h3 class="font-bold mb-1">Délai ?</h3>
+                    <p class="text-sm text-gray-600">Urgence dans l'heure. Devis sous 24h.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="text-accent text-2xl mb-2"><i class="fas fa-euro-sign"></i></div>
+                    <h3 class="font-bold mb-1">Prix ?</h3>
+                    <p class="text-sm text-gray-600">Transparents et annoncés avant travaux.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="text-accent text-2xl mb-2"><i class="fas fa-certificate"></i></div>
+                    <h3 class="font-bold mb-1">Garanti ?</h3>
+                    <p class="text-sm text-gray-600">Assurance décennale et certifié RGE.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-dark text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+                <h3 class="text-2xl font-bold mb-4">Multitech34</h3>
+                <p class="text-green-100 text-sm mb-6">Expertise technique, sincérité humaine et disponibilité.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Services</h4>
+                <ul class="space-y-2 text-sm text-green-100">
+                    <li><a href="plomberie.html" class="hover:text-white transition">Plomberie</a></li>
+                    <li><a href="chauffage.html" class="hover:text-white transition">Chauffage</a></li>
+                    <li><a href="climatisation.html" class="hover:text-white transition">Climatisation</a></li>
+                    <li><a href="depannage.html" class="hover:text-white transition">Multiservices</a></li>
+                    <li><a href="boutique.html" class="hover:text-white transition text-accent"><i class="fas fa-shopping-cart mr-1"></i> Boutique</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Zone d'Intervention</h4>
+                <ul class="text-sm text-green-100 space-y-1">
+                    <li><a href="lattes.html" class="hover:text-white transition"><i class="fas fa-map-marker-alt text-accent mr-2"></i>Lattes / Maurin</a></li>
+                    <li><a href="montpellier.html" class="hover:text-white transition"><i class="fas fa-city text-accent mr-2"></i>Montpellier</a></li>
+                    <li><a href="littoral.html" class="hover:text-white transition"><i class="fas fa-umbrella-beach text-accent mr-2"></i>Littoral</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Contact</h4>
+                <p class="text-sm text-green-100 mb-2"><a href="tel:0649955298" class="hover:text-white transition"><i class="fas fa-phone mr-2"></i> 06 49 95 52 98</a></p>
+                <p class="text-sm text-green-100"><a href="mailto:babferrer@icloud.com" class="hover:text-white transition"><i class="fas fa-envelope mr-2"></i> babferrer@icloud.com</a></p>
+            </div>
+        </div>
+        <div class="border-t border-green-900 pt-8 text-center">
+            <p class="text-sm text-green-200 mb-2">© 2025 Multitech34. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Madison Widget -->
+    <div class="madison-widget">
+        <button onclick="toggleMadison()" class="madison-button"><i class="fas fa-comment-dots"></i></button>
+        <div id="madisonChat" class="madison-chat">
+            <div class="bg-primary text-white p-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"><i class="fas fa-robot"></i></div>
+                    <div>
+                        <p class="font-bold">Madison</p>
+                        <p class="text-xs text-green-200">Assistante Multitech34</p>
+                    </div>
+                </div>
+            </div>
+            <div id="madisonMessages" class="flex-1 p-4 overflow-y-auto bg-gray-50"></div>
+            <div class="p-4 bg-white border-t flex gap-2">
+                <input type="text" id="madisonInput" placeholder="Une question ?" class="flex-1 border rounded-full px-4 py-2 text-sm outline-none focus:border-primary">
+                <button onclick="sendMessage()" class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="multitech34.js"></script>
+</body>
+</html>
