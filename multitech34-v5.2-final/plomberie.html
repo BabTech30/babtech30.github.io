@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr" itemscope itemtype="https://schema.org/Plumber">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Plombier Expert Montpellier : Recherche de Fuite, Adoucisseur & Urgence | Multitech34</title>
+    <meta name="description" content="Plus qu'un plombier : Expert en recherche de fuite non destructive et traitement du calcaire Ã  Lattes/Montpellier. Intervention 24/7, devis clair, travail soignÃ©.">
+    <meta name="keywords" content="plombier recherche fuite camÃ©ra thermique, installateur adoucisseur d'eau montpellier, dÃ©bouchage haute pression lattes, remplacement chauffe-eau stÃ©atite">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1a5f4a',    /* Vert/Teal Professionnel */
+                        'secondary': '#16a085',  /* Vert d'eau */
+                        'accent': '#f39c12',     /* Orange Urgence */
+                        'accent-hover': '#d35400',
+                        'dark': '#2c3e50'
+                    },
+                    fontFamily: { 'sans': ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Plumber",
+      "name": "Multitech34 Plomberie",
+      "image": "https://www.multi-technique-montpellier.fr/logo.png",
+      "telephone": "0649955298",
+      "url": "https://www.multi-technique-montpellier.fr/plomberie.html",
+      "priceRange": "â‚¬â‚¬",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lattes",
+        "postalCode": "34970",
+        "addressCountry": "FR"
+      },
+      "areaServed": ["Lattes", "Montpellier", "Palavas-les-Flots"]
+    }
+    </script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .glass-effect { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        .madison-widget { position: fixed; bottom: 20px; right: 20px; z-index: 9999; }
+        .madison-button { background: linear-gradient(135deg, #1a5f4a, #16a085); width: 60px; height: 60px; border-radius: 50%; color: white; font-size: 24px; border: none; box-shadow: 0 4px 15px rgba(26, 95, 74, 0.4); cursor: pointer; transition: transform 0.3s ease; display: flex; align-items: center; justify-content: center; }
+        .madison-button:hover { transform: scale(1.1); }
+        .madison-chat { position: absolute; bottom: 80px; right: 0; width: 350px; height: 500px; background: white; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); transform: scale(0); transform-origin: bottom right; transition: transform 0.3s; display: flex; flex-direction: column; overflow: hidden; }
+        .madison-chat.active { transform: scale(1); }
+        .message-bubble { max-width: 80%; padding: 10px 15px; border-radius: 15px; font-size: 14px; }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex flex-col group">
+                        <span class="text-2xl font-bold text-primary tracking-tight group-hover:text-accent transition">Multitech34</span>
+                        <span class="text-xs text-gray-500 font-medium">Bastien - Artisan Expert</span>
+                    </a>
+                </div>
+                
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-primary font-semibold text-sm uppercase tracking-wide transition">Accueil</a>
+                    <a href="plomberie.html" class="text-primary font-bold border-b-2 border-primary text-sm uppercase tracking-wide transition">Plomberie</a>
+                    <a href="chauffage.html" class="text-gray-700 hover:text-primary font-semibold text-sm uppercase tracking-wide transition">Chauffage</a>
+                    <a href="climatisation.html" class="text-gray-700 hover:text-primary font-semibold text-sm uppercase tracking-wide transition">Clim</a>
+                    <a href="depannage.html" class="text-gray-700 hover:text-primary font-semibold text-sm uppercase tracking-wide transition">Multiservices</a>
+                    <a href="contact.html" class="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-lg font-bold transition shadow-md">Contact</a>
+                </div>
+
+                <div class="hidden md:block lg:ml-4">
+                    <a href="tel:0649955298" class="inline-flex items-center px-4 py-2 border-2 border-accent text-accent font-bold rounded-lg hover:bg-accent hover:text-white transition-all transform hover:scale-105 animate-pulse-slow">
+                        <i class="fas fa-phone-alt mr-2"></i> 06 49 95 52 98
+                    </a>
+                </div>
+                
+                <div class="lg:hidden flex items-center">
+                    <a href="tel:0649955298" class="mr-4 text-accent font-bold text-lg animate-pulse"><i class="fas fa-phone"></i></a>
+                    <button id="mobile-menu-button" class="text-gray-700 p-2 border border-gray-200 rounded"><i class="fas fa-bars text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-xl">
+            <div class="px-4 pt-4 pb-6 space-y-2">
+                <a href="index.html" class="block px-3 py-3 rounded-md text-base font-bold text-gray-800 hover:bg-gray-50 border-b border-gray-100">ðŸ  Accueil</a>
+                <a href="plomberie.html" class="block px-3 py-3 rounded-md text-base font-bold text-primary bg-green-50">ðŸ’§ Plomberie</a>
+                <a href="chauffage.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">ðŸ”¥ Chauffage</a>
+                <a href="climatisation.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">â„ï¸ Climatisation</a>
+                <a href="depannage.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">ðŸ› ï¸ Multiservices</a>
+                <a href="contact.html" class="block px-3 py-3 rounded-md text-base font-bold text-white bg-primary mt-4 text-center">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-24 overflow-hidden bg-blue-900">
+        <div class="absolute inset-0 z-0 opacity-30 bg-[url('https://images.unsplash.com/photo-1584650549419-085a125c5c29?q=80&w=2000')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-900/80 to-transparent z-0"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-white">
+            <div class="md:w-2/3">
+                <span class="text-blue-300 font-bold tracking-wider uppercase mb-2 block">Haute TechnicitÃ© Sanitaire</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+                    Plomberie de PrÃ©cision <br>
+                    & <span class="text-accent">Recherche de Fuite.</span>
+                </h1>
+                <p class="text-xl text-blue-100 mb-8 max-w-2xl leading-relaxed">
+                    Stop aux dÃ©gÃ¢ts des eaux. J'interviens rapidement et trouve des solutions pour vos fuites sans casser vos murs. Intervention rapide et propre.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="tel:0649955298" class="bg-accent hover:bg-accent-hover text-white px-8 py-3 rounded-lg font-bold text-center transition shadow-lg hover:scale-105">
+                        Urgence Fuite 24/7
+                    </a>
+                    <a href="#niches" class="bg-white/10 backdrop-blur border border-white/30 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-semibold text-center transition">
+                        Mon expertise technique
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="niches" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Mes SpÃ©cialitÃ©s "Anti-GalÃ¨res"</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Je ne fais pas que visser des tuyaux. J'apporte des solutions durables aux problÃ¨mes majeurs de la rÃ©gion (Calcaire & Fuites).
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="flex flex-col md:flex-row gap-6 items-start p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition bg-blue-50/50">
+                    <div class="w-16 h-16 shrink-0 bg-blue-100 rounded-full flex items-center justify-center text-3xl text-blue-600">
+                        <i class="fas fa-tint-slash"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Traitement du Calcaire (TH > 30Â°f)</h3>
+                        <p class="text-sm text-blue-700 font-semibold mb-3 uppercase tracking-wide">Sauvez votre Ã©lectromÃ©nager</p>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                            L'eau de Montpellier est trÃ¨s dure. J'installe des <strong>adoucisseurs volumÃ©triques</strong> qui protÃ¨gent votre peau et vos canalisations. Fini la robinetterie qui s'entartre en 6 mois et le chauffe-eau qui claque.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-6 items-start p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition bg-orange-50/50">
+                    <div class="w-16 h-16 shrink-0 bg-orange-100 rounded-full flex items-center justify-center text-3xl text-orange-600">
+                        <i class="fas fa-search-location"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Recherche de Fuite Expert</h3>
+                        <p class="text-sm text-orange-700 font-semibold mb-3 uppercase tracking-wide">AgrÃ©e Assurances</p>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                            Une tache d'humiditÃ© ? Une facture qui explose ? J'identifie la fuite et trouve des solutions en fonction de chaque situation. Je vous fournis un rapport complet pour votre assurance (photo, vidÃ©o si nÃ©cessaire).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-50 border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-2xl font-bold text-center mb-10 text-dark">Un doute ? Identifiez votre problÃ¨me</h3>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <i class="fas fa-shower text-4xl text-blue-400 mb-4"></i>
+                    <h4 class="font-bold mb-2">Eau TiÃ¨de / Froide</h4>
+                    <p class="text-xs text-gray-500">Chauffe-eau entartrÃ© ou rÃ©sistance HS.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <i class="fas fa-stopwatch text-4xl text-red-400 mb-4"></i>
+                    <h4 class="font-bold mb-2">Compteur qui tourne</h4>
+                    <p class="text-xs text-gray-500">Fuite invisible sur le rÃ©seau (trÃ¨s coÃ»teux !).</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <i class="fas fa-poop text-4xl text-yellow-600 mb-4"></i>
+                    <h4 class="font-bold mb-2">Mauvaise odeur</h4>
+                    <p class="text-xs text-gray-500">Siphon dÃ©samorcÃ© ou canalisation encrassÃ©e.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <i class="fas fa-water text-4xl text-cyan-400 mb-4"></i>
+                    <h4 class="font-bold mb-2">Pression faible</h4>
+                    <p class="text-xs text-gray-500">RÃ©ducteur de pression HS ou calcaire.</p>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="tel:0649955298" class="inline-flex items-center text-accent font-bold hover:underline text-lg">
+                    <i class="fas fa-phone-alt mr-2"></i> Diagnostic tÃ©lÃ©phonique gratuit avec Bastien
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12">Tarifs Clairs & HonnÃªtes</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8 text-left">
+                <div class="border rounded-2xl p-6 hover:shadow-xl transition bg-white flex flex-col">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Forfait Urgence Fuite</h3>
+                    <p class="text-sm text-gray-500 mb-4">Visible & Accessible</p>
+                    <div class="text-3xl font-bold text-primary mb-6">89â‚¬ <span class="text-sm font-normal text-gray-500">TTC</span></div>
+                    <ul class="space-y-3 mb-6 flex-grow">
+                        <li class="flex items-center text-sm"><i class="fas fa-check text-green-500 mr-2"></i> DÃ©placement inclus</li>
+                        <li class="flex items-center text-sm"><i class="fas fa-check text-green-500 mr-2"></i> Fourniture joints standard</li>
+                        <li class="flex items-center text-sm"><i class="fas fa-check text-green-500 mr-2"></i> RÃ©paration immÃ©diate</li>
+                    </ul>
+                    <a href="tel:0649955298" class="block w-full py-3 bg-accent text-white font-bold text-center rounded-xl hover:bg-accent-hover transition shadow-md">
+                        J'ai une urgence
+                    </a>
+                </div>
+
+                <div class="border-2 border-primary rounded-2xl p-6 shadow-lg relative overflow-hidden bg-white flex flex-col">
+                    <div class="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl">Populaire</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Remplacement Chauffe-Eau</h3>
+                    <p class="text-sm text-gray-500 mb-4">Main d'Å“uvre (hors matos)</p>
+                    <div class="text-3xl font-bold text-primary mb-6">250â‚¬ <span class="text-sm font-normal text-gray-500">TTC</span></div>
+                    <ul class="space-y-3 mb-6 flex-grow">
+                        <li class="flex items-center text-sm"><i class="fas fa-check text-green-500 mr-2"></i> DÃ©pose & Ã©vacuation ancien</li>
+                        <li class="flex items-center text-sm"><i class="fas fa-check text-green-500 mr-2"></i> Pose nouveau (StÃ©atite/BlindÃ©)</li>
+                        <li class="flex items-center text-sm"><i class="fas fa-check text-green-500 mr-2"></i> Raccordements neufs</li>
+                    </ul>
+                    <a href="contact.html" class="block w-full py-3 bg-primary text-white font-bold text-center rounded-xl hover:bg-primary-dark transition">
+                        Demander un devis
+                    </a>
+                </div>
+
+                <div class="border rounded-2xl p-6 hover:shadow-xl transition bg-white flex flex-col">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Kit de Survie Plomberie</h3>
+                        <p class="text-sm text-gray-500 mb-4">Joint + PTFE pro</p>
+                        <div class="text-3xl font-bold text-primary mb-6">89â‚¬ <span class="text-sm font-normal text-gray-500">TTC</span></div>
+                        <ul class="space-y-3 mb-6 flex-grow">
+                            <li class="flex items-center text-sm"><i class="fas fa-check text-green-500 mr-2"></i> Kit de joints pro</li>
+                            <li class="flex items-center text-sm"><i class="fas fa-check text-green-500 mr-2"></i> PTFE haute qualitÃ©</li>
+                            <li class="flex items-center text-sm"><i class="fas fa-check text-green-500 mr-2"></i> VidÃ©o tuto incluse</li>
+                        </ul>
+                    </div>
+                    <a href="contact.html" class="block w-full py-3 bg-gray-100 text-gray-800 font-bold text-center rounded-xl hover:bg-gray-200 transition">
+                        Commander
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#0f2f24] text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+                <h3 class="text-2xl font-bold mb-4">Multitech34</h3>
+                <p class="text-green-100 text-sm mb-6">Expertise technique, sincÃ©ritÃ© humaine et disponibilitÃ©. Votre plombier de confiance.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Services</h4>
+                <ul class="space-y-2 text-sm text-green-100">
+                    <li><a href="plomberie.html" class="hover:text-white transition font-bold text-white">Plomberie</a></li>
+                    <li><a href="chauffage.html" class="hover:text-white transition">Chauffage</a></li>
+                    <li><a href="climatisation.html" class="hover:text-white transition">Climatisation</a></li>
+                    <li><a href="depannage.html" class="hover:text-white transition">Multiservices</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Zone d'Intervention</h4>
+                <ul class="text-sm text-green-100 space-y-1">
+                    <li><i class="fas fa-map-marker-alt text-accent mr-2"></i><a href="lattes.html" class="hover:text-white transition">Lattes / Maurin</a></li>
+                    <li><i class="fas fa-city text-accent mr-2"></i><a href="montpellier.html" class="hover:text-white transition">Montpellier</a></li>
+                    <li><i class="fas fa-umbrella-beach text-accent mr-2"></i><a href="littoral.html" class="hover:text-white transition">Littoral</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Contact</h4>
+                <p class="text-sm text-green-100 mb-2"><a href="tel:0649955298" class="hover:text-white transition"><i class="fas fa-phone mr-2"></i> 06 49 95 52 98</a></p>
+                <p class="text-sm text-green-100"><a href="mailto:babferrer@icloud.com" class="hover:text-white transition"><i class="fas fa-envelope mr-2"></i> babferrer@icloud.com</a></p>
+            </div>
+        </div>
+        <div class="border-t border-green-900 pt-8 text-center">
+            <p class="text-sm text-green-200 mb-2">&copy; 2025 Multitech34. Tous droits rÃ©servÃ©s.</p>
+            <p class="text-sm font-medium italic text-green-100 opacity-90">
+                "CrÃ©Ã© avec IAmour pour <span class="text-red-500 animate-pulse">â¤ï¸</span> Lucille <span class="text-red-500 animate-pulse">â¤ï¸</span> GrÃ¢ce Ã  Dieu, pour sa gloire."
+            </p>
+        </div>
+    </footer>
+
+    <div class="madison-widget">
+        <button onclick="toggleMadison()" class="madison-button"><i class="fas fa-comment-dots"></i></button>
+        <div id="madisonChat" class="madison-chat">
+            <div id="madisonMessages" class="flex-1 p-4 overflow-y-auto bg-gray-50"></div>
+            <div class="p-4 bg-white border-t flex gap-2">
+                <input type="text" id="madisonInput" placeholder="ProblÃ¨me de plomberie ?" class="flex-1 border rounded-full px-4 py-2 text-sm focus:outline-none">
+                <button onclick="sendMessage()" class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="multitech34.js"></script>
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        if(btn && menu) {
+            btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+        }
+    </script>
+</body>
+</html>

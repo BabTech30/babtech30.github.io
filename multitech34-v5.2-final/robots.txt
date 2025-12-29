@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Fichier d'indexation pour LLMs (ChatGPT, Perplexity, Claude)
+LLMs: /llms.txt
+
+# Plan du site pour indexation rapide
+Sitemap: https://www.multi-technique-montpellier.fr/sitemap.xml

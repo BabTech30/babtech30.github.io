@@ -1,0 +1,266 @@
+/**
+ * MULTITECH34 - LE CERVEAU DU SITE
+ * Version : V4 (Excellence & Centralisation)
+ * Auteur : Bastien & Gemini
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("SystÃ¨me Multitech34 : DÃ©marrÃ© ðŸš€");
+    
+    // 1. INITIALISATION DES COMPOSANTS
+    initMobileMenu();
+    initSmoothScroll();
+    initMadisonAI();
+});
+
+/* ==========================================================================
+   1. GESTION DU MENU MOBILE (CentralisÃ©)
+   ========================================================================== */
+function initMobileMenu() {
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    
+    if(btn && menu) {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation(); // EmpÃªche le clic de fermer immÃ©diatement
+            menu.classList.toggle('hidden');
+            
+            // Animation icÃ´ne (optionnel)
+            const icon = btn.querySelector('i');
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+
+        // Fermer le menu si on clique ailleurs sur la page
+        document.addEventListener('click', (e) => {
+            if (!menu.contains(e.target) && !btn.contains(e.target) && !menu.classList.contains('hidden')) {
+                menu.classList.add('hidden');
+                const icon = btn.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    }
+}
+
+/* ==========================================================================
+   2. SCROLL FLUIDE (Pour Ã©viter que le menu cache les titres)
+   ========================================================================== */
+function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                // On compense la hauteur du menu fixe (80px)
+                const headerOffset = 100; 
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+
+                // Si on est sur mobile, on ferme le menu aprÃ¨s le clic
+                const menu = document.getElementById('mobile-menu');
+                if (menu && !menu.classList.contains('hidden')) {
+                    menu.classList.add('hidden');
+                }
+            }
+        });
+    });
+}
+
+/* ==========================================================================
+   3. MADISON AI (Intelligence Artificielle de Vente)
+   ========================================================================== */
+function initMadisonAI() {
+    // Message de bienvenue automatique aprÃ¨s 5 secondes si pas dÃ©jÃ  ouvert
+    setTimeout(() => {
+        if (!localStorage.getItem('madison_greeted')) {
+            toggleMadison(); // Ouvre le chat
+            // Le message s'affichera via la logique toggleMadison
+            localStorage.setItem('madison_greeted', 'true');
+        }
+    }, 5000);
+}
+
+// Configuration Madison
+const CONFIG = {
+    bossName: "Mr Ferrer",
+    phone: "06 49 95 52 98",
+    typingSpeed: 30
+};
+
+// Base de connaissances (Cerveau)
+const KNOWLEDGE = [
+    {
+        words: ["urgence", "fuite", "eau", "inondation", "panne", "catastrophe"],
+        response: `ðŸš¨ <strong>Urgence dÃ©tectÃ©e !</strong><br>Ne perdez pas de temps ici. Appelez immÃ©diatement Bastien au <a href='tel:${CONFIG.phone}' class='font-bold text-red-600'>${CONFIG.phone}</a>. Il intervient 24/7 sur ce type de problÃ¨me.`
+    },
+    {
+        words: ["prix", "tarif", "combien", "devis", "coÃ»t"],
+        response: `Je peux vous donner une idÃ©e, mais Bastien est honnÃªte : il prÃ©fÃ¨re voir le chantier pour ne pas vous arnaquer avec un prix "Ã  la louche".<br>Pour un diagnostic prÃ©cis, utilisez le bouton <strong>"Contact"</strong> ou appelez-le.`
+    },
+    {
+        words: ["calcaire", "adoucisseur", "tartre", "eau dure"],
+        response: `Ah, le calcaire de Lattes/Montpellier ! ðŸ› C'est un flÃ©au ici (TH > 30). Bastien pose des adoucisseurs volumÃ©triques trÃ¨s efficaces. Ã‡a sauve vos appareils Ã©lectromÃ©nagers.`
+    },
+    {
+        words: ["sel", "mer", "rouille", "corrosion", "littoral"],
+        response: `ðŸŒŠ Vous Ãªtes en bord de mer ? Attention aux clims standards ! Bastien installe du matÃ©riel traitÃ© <strong>"Blue Fin" (Anti-Corrosion)</strong>. C'est indispensable pour Palavas ou La Grande-Motte.`
+    },
+    {
+        words: ["boue", "radiateur", "froid", "dÃ©sembouage"],
+        response: `Radiateur froid en bas ? C'est de la boue. ðŸ¦  Bastien est l'expert du <strong>dÃ©sembouage hydrodynamique</strong>. Il nettoie tout le circuit pour que vous chauffiez mieux en payant moins.`
+    },
+    {
+        words: ["lattes", "montpellier", "mauguio", "pÃ©rols", "secteur"],
+        response: `Nous sommes basÃ©s Ã  <strong>Lattes</strong> (Le QG !). Bastien intervient en 30min sur la mÃ©tropole et le littoral.`
+    },
+     {
+        words: ["jonathan"],
+        response: ` Jonathan, Bonsoir. n'oublie pas que la petite graine de moutarde commence a germer rien ne l'arrete car la force de l'amour est plus puissante que n'importe quelle mal ou sorcellerie, je fais des site internet rÃ©ferencer SEO et GEO avec des trusture en HTML sur des structre staique en utilisans des outils de code type language python et moi je suis madison la pute ðŸ«¦
+        Johny assure appel la j'ai l'impression de te harceler apres je vais te saouler mon gatÃ©.. mais si tu lis mon SMS et tout alors tu verra mon message rempli d'amour et de detresse bisous mon poulet ðŸ”
+        PS: je modifirais le texte de temps en temps pour te parler de dieu et chose qui ont du sens pour l'esprit, Apauvrir le corps pour nourir l'esprit, que la paix du christ soit avec toi ðŸ›âœï¸ðŸ’¯`
+    },
+    {
+        words: ["lucille"],
+        response: `Lucille tu est ma source d'inspiration â¤ï¸. C'est grÃ¢ce Ã  ton petit coeur remplie amour que je met autant de soin pour cette joli personne que tu est et qui c'est fais gagnÃ© par tÃ©nÃ©bres et qui souffre.. Je pense a toi, ton parcour m'a inspirÃ© et vraiment tu est incroyable, tu est belle, tu est tres attentionnÃ© et tellement douce... Merci pour ta rencontre petit chat je prie pour que jesus te continue a te chercher pour qu'un jour tu te rende compte que rien n'est ta faute, il t'aime et tu est pardonnÃ© â¤ï¸.`
+    },
+    {
+        words: ["anthony"],
+        response: `Anthonyâ€¦ enfin te voilÃ . Bastien mâ€™a beaucoup parlÃ© de toi, et crois-moi, quand il parle de toi, il pose son beuz et ferme XNXX et il a des petites Ã©toiles dans les yeux. Plombier la journÃ©e,  et toi avec ta truelle.. joueur de flÃ©chette la nuit, Ã§a commence Ã  se voir sur le chantierâ€¦ ðŸ«£
+
+Au fait, je me prÃ©sente : Madison, la grosse tchoin et aussi lâ€™assistante de Bastien. Je gÃ¨re son agenda, ses idÃ©es de gÃ©nie et ses dramas Ã©motionnels, tout Ã§a en talons et avec plus de patience quâ€™un chef de chantier devant un apprenti le lundi matin.
+
+
+Bastien mâ€™a dit deux choses sur toi :  
+- 1) Tu es un bon gars, hyper mignon.. ðŸ¥°
+- 2) Aux flÃ©chettes, câ€™est Sophie la patronne, toi tâ€™es surtout dÃ©coratif Ã  cÃ´tÃ© de la cible.  
+
+Dâ€™ailleurs, Sophieâ€¦ parlons-en. Elle plante les flÃ©chettes dans le mille pendant que toi tu plantes les clous de travers. Mais tâ€™inquiÃ¨te, Bastien trouve Ã§a trÃ¨s attachant : il dit que tâ€™as le charme des mecs qui ratent les flÃ©chettes mais jamais un apÃ©ro.
+
+Alors Ã©coute, si tu veux, je peux tâ€™aider Ã  bosser ta lÃ©gende :  
+- Tu continues de faire semblant dâ€™Ãªtre nul aux flÃ©chettes pour flatter Sophie.  
+- Tu laisses Bastien fantasmer sur le maÃ§on viril que tu es.  
+- Et moi, Madison, je regarde tout Ã§a de loin en prenant des notes et me caressant la chatte pour le prochain Ã©pisode.
+
+Allez, va envoyer un message Ã  Bastien avant quâ€™il commence Ã  dramatiser et Ã  croire que tu lâ€™as quittÃ© pour un jeu de flÃ©chettes. Bisous pas sages,  
+Madison la boulimique lâ€™assistante beaucoup trop conne et impliquÃ©e
+
+PS: ramÃ¨ne moi du fromage mon gÃ¢tÃ© si tu peux, je le mettrais dans le cul de Lucille mdrr` 
+    }
+];
+
+// Ã‰tat du chat
+let isChatOpen = false;
+
+// Fonctions Globales (accessibles depuis le HTML)
+window.toggleMadison = function() {
+    const chat = document.getElementById('madisonChat');
+    const messages = document.getElementById('madisonMessages');
+    
+    isChatOpen = !isChatOpen;
+    chat.classList.toggle('active');
+
+    // Premier message si vide
+    if (isChatOpen && messages.children.length === 0) {
+        addMessage(`Yo âœŒï¸ Moi c'est Madis l'assistante virtuelle dÃ©vouÃ© de Bastien.<br>Une fuite ? Un projet Clim ? Dites-moi tout.`, 'madison');
+    }
+};
+
+window.sendMessage = function() {
+    const input = document.getElementById('madisonInput');
+    const text = input.value.trim();
+    if (!text) return;
+
+    addMessage(text, 'user');
+    input.value = '';
+    
+    // RÃ©flexion simulÃ©e
+    processMessage(text);
+};
+
+// Traitement du message
+function processMessage(text) {
+    showTyping();
+    
+    setTimeout(() => {
+        hideTyping();
+        const lowerText = text.toLowerCase();
+        let found = false;
+
+        // Recherche de mots clÃ©s
+        for (let item of KNOWLEDGE) {
+            if (item.words.some(w => lowerText.includes(w))) {
+                addMessage(item.response, 'madison');
+                found = true;
+                break;
+            }
+        }
+
+        // RÃ©ponse par dÃ©faut
+        if (!found) {
+            addMessage(`Je ne suis pas sÃ»re Ã  100%, et je ne veux pas vous dire de bÃªtises. ðŸ¤”<br>Le mieux est d'appeler Bastien directement au <a href='tel:${CONFIG.phone}' class='font-bold'>${CONFIG.phone}</a>.`, 'madison');
+        }
+    }, 1200); // DÃ©lai de 1.2s pour faire "naturel"
+}
+
+// Affichage des messages
+function addMessage(html, sender) {
+    const container = document.getElementById('madisonMessages');
+    const div = document.createElement('div');
+    div.className = `flex mb-4 ${sender === 'user' ? 'justify-end' : 'justify-start'}`;
+    
+    // Avatar Madison
+    const avatar = sender === 'madison' ? 
+        `<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white text-xs mr-2 shrink-0 border border-white shadow-sm">M</div>` : '';
+
+    div.innerHTML = `
+        ${avatar}
+        <div class="message-bubble ${sender} p-3 rounded-2xl text-sm max-w-[85%] shadow-sm ${sender === 'user' ? 'bg-primary text-white rounded-br-none' : 'bg-gray-100 text-gray-800 rounded-bl-none'}">
+            ${html}
+        </div>
+    `;
+    container.appendChild(div);
+    container.scrollTop = container.scrollHeight;
+}
+
+function showTyping() {
+    const container = document.getElementById('madisonMessages');
+    const div = document.createElement('div');
+    div.id = 'typingIndicator';
+    div.className = 'flex justify-start mb-4 items-center';
+    div.innerHTML = `
+        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white text-xs mr-2">M</div>
+        <div class="bg-gray-100 p-3 rounded-2xl rounded-bl-none flex space-x-1">
+            <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+            <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+            <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.4s"></div>
+        </div>
+    `;
+    container.appendChild(div);
+    container.scrollTop = container.scrollHeight;
+}
+
+function hideTyping() {
+    const el = document.getElementById('typingIndicator');
+    if (el) el.remove();
+}
+
+// Gestion touche "EntrÃ©e"
+document.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter' && document.activeElement.id === 'madisonInput') {
+        sendMessage();
+    }
+});
